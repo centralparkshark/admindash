@@ -1,37 +1,131 @@
-.screen {
+body {
+    margin: 0;
+    background-color: #FDFFF7;
+    font-family: Roboto, Georgia, 'Times New Roman', Times, serif;
     display:grid;
     grid-template: 15vh 85vh / min(400px, 20%) auto;
 }
 
-div {
-    border: red 2px solid;
+/*top and search bar*/
+.top {
+    box-shadow: 0px 5px 10px rgba(47, 79, 79, 0.2);
+    z-index: 10;
+}
+
+.top .search {
+    display: flex;
+    flex-direction: row;
+}
+
+.top svg {
+    height: 3vh;
+}
+
+/*sidebar*/
+.header {
+    padding: 8px;
+    display: flex;
+    line-height: 8vh;
+}
+
+.header svg {
+    width: min(20%, 50px);
+    padding-left: 1vh;
+}
+
+.header .title {
+    font-size: 1.6em;
+    height: 8vh;
+    vertical-align: middle;
 }
 
 .sidebar {
     grid-row: span 2;
+    background-color: #284B63;
+    color: #FDFFF7;
+    font-size: 1.2vw;
+    font-weight: bold;
 }
 
-.top {
-
+.sidebar svg {
+    fill: #FDFFF7;
+    margin-right: 16px;
 }
 
+.nav {
+    padding: 8px;
+}
+
+.navLink {
+    display: flex;
+    padding: 1.4vh;
+    padding-left: 2vw;
+    line-height: 2.4vh;
+}
+
+.spacer {
+    height: 4vh;
+}
+
+.navLink svg {
+    height: 2.4vh;
+    flex-shrink: 0;
+}
+
+.navText {
+    height: 2.4vh;
+    vertical-align: middle;
+}
+
+/*dashboard (project cards)*/
 .dash {
+    background-color: rgb(226, 225, 225);
     display: grid;
-    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template: 1fr 1fr / 2.5fr 1fr;
+    padding-bottom: 12vh;
 }
 
-.dash div {
-    border: 3px pink solid;
+.dash .subtitle {
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .projects {
     grid-row: span 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    height: 100%;
+}
 
+.container {
+    grid-row: span 2;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 16px;
+    margin: 4%;
+    height: inherit;
 }
 
 .card {
-    width: 40%;
+    background-color: #FF785A;
+    min-width: 42%;
+    margin: 2%;
+    border-radius: 8px;
+    }
+
+.card2 {
+    background-color: #FDFFF7;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+    left: 8px;
+    box-shadow: 4px 4px 4px rgba(47, 79, 79, 0.2);
+
+}
+
+.announcements {
+
+}
+
+.trending {
+    
 }
