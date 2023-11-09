@@ -4,6 +4,59 @@ body {
     font-family: Roboto, Georgia, 'Times New Roman', Times, serif;
     display: grid;
     grid-template: 15vh 85vh / min(400px, 20%) auto;
+    height: 100%;
+    border: 2px salmon solid;
+}
+
+/*
+sidebar: gets a lil wonky when shrunk too small
+top
+dash
+*/
+
+/*sidebar*/
+.sidebar {
+    grid-row: span 2;
+    background-color: #284B63;
+    color: #FDFFF7;
+    font-weight: bold;
+    padding-left: 1vw;
+    font-size: 1.4vw;
+}
+
+.sidebar svg {
+    fill: #FDFFF7;
+}
+
+.header {
+    display: flex;
+    gap: 4px;
+}
+
+.header svg {
+    width: 3vw;
+}
+
+.header .title {
+    font-size: 2vw;
+    height: 2vw;
+    vertical-align: middle;
+}
+
+.navLink {
+    display: flex;
+    padding: 1em;
+    gap: 16px;
+    line-height: 2vw;
+    height: 2vw;
+}
+
+.navText {
+    vertical-align: middle;
+}
+
+.secondaryLinks, .primaryLinks {
+    padding-top: 1rem;
 }
 
 /*top and search bar*/
@@ -31,63 +84,13 @@ body {
     height: 3vh;
 }
 
-/*sidebar*/
-.header {
-    padding: 8px;
-    display: flex;
-    line-height: 8vh;
-}
-
-.header svg {
-    width: min(20%, 50px);
-    padding-left: 1vh;
-}
-
-.header .title {
-    font-size: 1.6em;
-    height: 8vh;
-    vertical-align: middle;
-}
-
-.sidebar {
-    grid-row: span 2;
-    background-color: #284B63;
-    color: #FDFFF7;
-    font-size: 1.2vw;
-    font-weight: bold;
-}
-
-.sidebar svg {
-    fill: #FDFFF7;
-    margin-right: 16px;
-}
-
-.nav {
-    padding: 8px;
-}
-
-.navLink {
-    display: flex;
-    padding: 1.4vh;
-    padding-left: 2vw;
-    line-height: 2.4vh;
-}
-
-.spacer {
-    height: 4vh;
-}
-
-.navLink svg {
-    height: 2.4vh;
-    flex-shrink: 0;
-}
-
-.navText {
-    height: 2.4vh;
-    vertical-align: middle;
-}
 
 /*dashboard (project cards)*/
+
+.projects div {
+    border: red 1px solid;
+}
+
 .dash {
     background-color: rgb(226, 225, 225);
     padding-bottom: 12vh;
@@ -109,7 +112,6 @@ body {
     grid-template-rows: repeat(4, 1fr);
     padding: 2vw 0; 
     height: 100%;
-
     max-height: 85vh;
 }
 
@@ -134,15 +136,15 @@ body {
 
 .projectContainer {
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
     gap: 2vh 3vh;
     padding-right: 8px;
-    height: 100%;
 }
 
 .card {
     background-color: #FF785A;
     border-radius: 8px;
+    height: 33%;
 }
 
 .card2 {
@@ -164,6 +166,7 @@ body {
     padding: 0 2vw;
     grid-column: span 2;
     padding-top: 3vh;
+    max-height: 10vh;
 }
 
 .cardButtons {
@@ -212,5 +215,4 @@ body {
     border-bottom: 1px solid rgb(49, 49, 49);
     padding: 10px 0px;
 }
-
 
