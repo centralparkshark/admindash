@@ -4,6 +4,7 @@ body {
     font-family: Roboto, Georgia, 'Times New Roman', Times, serif;
     display: grid;
     grid-template: 15vh auto / max(18vw, 150px) auto;
+    height: 100vh;
 }
 
 /*
@@ -91,7 +92,6 @@ dash
     display: grid;
     grid-template-columns: 70% auto;
     padding: 2%;
-    padding-bottom: 4%;
 }
 .containerLeft, .containerRight {
     display: flex;
