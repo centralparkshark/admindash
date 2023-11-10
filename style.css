@@ -33,7 +33,11 @@ dash
 }
 
 .header svg {
-    width: 3vw;
+    width: max(3vw, 25px);
+}
+
+.nav svg {
+    width: max(2vw, 15px);
 }
 
 .header .title {
@@ -47,8 +51,8 @@ dash
     padding-bottom: .6rem;
     padding-left: .4rem;
     gap: .8rem;
-    line-height: 2vw;
-    height: 2vw;
+    line-height: max(2vw, 25px);
+    height: max(2vw, 25px);
 }
 
 .navText {
