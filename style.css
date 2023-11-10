@@ -233,7 +233,8 @@ img.logo {
 .user {
     flex: 1;
     display: flex;
-    padding: 10px 0px;
+    padding: 1vh 0px;
+    align-items: center;
 }
 
 .user .right {
